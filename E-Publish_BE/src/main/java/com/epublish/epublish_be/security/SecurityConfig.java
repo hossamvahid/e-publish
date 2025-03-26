@@ -50,6 +50,9 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
                         .requestMatchers("/api/v1/auth/**").permitAll()
                         .requestMatchers("/api/v1/user/**").hasAnyAuthority("User","Author","Pending")
+                        .requestMatchers("/api/v1/book/delete").hasAnyAuthority("Author")
+                        .requestMatchers("/api/v1/book/create").hasAnyAuthority("Author")
+                        .requestMatchers("/api/v1/book/**").permitAll()
                         .requestMatchers("/api/v1/admin/**").hasAnyAuthority("Admin")
                         .anyRequest().authenticated())
                 .sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

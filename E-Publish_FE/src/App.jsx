@@ -12,6 +12,8 @@ import LoginPage from './Pages/LoginPage';
 import SignUp from './Pages/SignUp';
 import ProfilePage from './Pages/ProfilePage';
 import Dashboard from './Pages/Dashboard';
+import BooksPage from './Pages/BooksPage';
+
 
 function App() {
 
@@ -64,6 +66,15 @@ function App() {
           element={
             <Layout>
              <Dashboard/>
+            </Layout>
+          }
+        />
+
+        <Route
+          path="/books"
+          element={
+            <Layout>
+              <BooksPage/>
             </Layout>
           }
         />

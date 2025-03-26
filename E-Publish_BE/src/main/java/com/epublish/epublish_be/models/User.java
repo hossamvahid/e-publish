@@ -2,12 +2,11 @@ package com.epublish.epublish_be.models;
 
 
 import com.epublish.epublish_be.enums.Status;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import lombok.*;
+
+import java.util.List;
 
 @Data
 @Entity
@@ -29,6 +28,10 @@ public class User {
     private String password;
 
     private Status status=Status.User;
+
+    @OneToMany(mappedBy = "user")
+    private List<Book> books;
+
 
 
 }

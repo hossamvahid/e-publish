@@ -83,6 +83,16 @@ const Navbar=()=>
                         onClick={()=>handleRedicrectClick("/")}>
                             Home
                         </Button>
+
+                        <Button
+                        sx={{
+                            color:"white",
+                            backgroundColor:"transparent"
+                        }}
+                        onClick={()=>handleRedicrectClick("/books")}>
+                            Books
+                        </Button>
+
                     </div>
 
                   {role === ""&&(
