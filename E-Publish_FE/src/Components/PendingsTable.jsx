@@ -136,7 +136,7 @@ const PendingsTable = () => {
           marginBottom: 5,
         }}
       >
-        Authors
+        Pendings
       </Typography>
 
         <TableContainer>

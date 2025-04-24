@@ -41,7 +41,7 @@ public class BookService {
         String username = authentication.getName();
         User user= userRepository.findByUsername(username).orElseThrow(()-> new UsernameNotFoundException("User not found"));
         Genre genreBook=Genre.valueOf(genre);
-       String filename=minioService.uploadFile(file);
+        String filename=minioService.uploadFile(file);
 
         Book book = new Book(title,description,genreBook,filename,user);
         bookRepository.save(book);

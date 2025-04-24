@@ -72,7 +72,7 @@ const Navbar=()=>
                     backgroundColor:'#B5A8D5'
                 }}>
 
-                    <p>Aici logo</p>
+                    <p>E-Publish</p>
 
                     <div className="flex space-x-6">
                         <Button
